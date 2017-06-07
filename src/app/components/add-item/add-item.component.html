@@ -1,0 +1,23 @@
+<p>
+  add-item works!
+</p>
+<form class="form" (submit)="submit()" (reset)="reset()" [formGroup]="formGroup">
+  <div class="form-group" [ngClass]="{'has-danger': formGroup.get('name').invalid && formGroup.get('name').dirty}">
+    <label class="form-control-label" for="name">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name"
+           [ngClass]="{'form-control-danger': formGroup.get('name').invalid && formGroup.get('name').dirty}">
+    <div
+      *ngIf="formGroup.get('name').invalid && formGroup.get('name').dirty && formGroup.get('name').errors['required']"
+      class="form-control-feedback">Name is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="form-control-label" for="description">Description</label>
+    <input type="text" class="form-control" id="description" formControlName="description">
+  </div>
+  {{formGroup.errors | json}}
+  <div>
+    <button type="submit" class="btn btn-primary" [disabled]="formGroup.pristine || formGroup.invalid">Save</button>
+    <button type="reset" class="btn btn-secondary">Cancel</button>
+  </div>
+</form>

@@ -1,0 +1,8 @@
+<p>
+  list-items works!
+</p>
+<div class="list-group">
+  <div *ngFor="let item of storedItems$ | async" class="list-group-item">
+    {{item | json}}
+  </div>
+</div>

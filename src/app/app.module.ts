@@ -18,6 +18,8 @@ import { effects } from "./state";
 import { StoredItemsApiService } from "./state/stored-item/stored-items-api.service";
 import { HttpModule } from "@angular/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { AttachmentApiService } from "./components/add-attachment/attachment-api.service";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     AddItemComponent,
     AddAttachmentComponent,
     ListItemsComponent,
-    NavComponent
+    NavComponent,
+    FileUploadComponent
   ],
   imports: [
     SharedModule,
@@ -44,7 +47,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     ...effects,
     AppRoutingModule
   ],
-  providers: [StoredItemsApiService],
+  providers: [
+    AttachmentApiService,
+    StoredItemsApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

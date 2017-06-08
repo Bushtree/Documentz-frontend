@@ -2,7 +2,7 @@
   list-items works!
 </p>
 <div class="list-group">
-  <div *ngFor="let item of storedItems$ | async" class="list-group-item">
+  <a *ngFor="let item of storedItems$ | async" class="list-group-item" [routerLink]="['/new-attachment', item.id]">
     {{item | json}}
-  </div>
+  </a>
 </div>

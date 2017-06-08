@@ -7,7 +7,7 @@ import {AddAttachmentComponent} from "./components/add-attachment/add-attachment
 const appRoutes: Routes = [
   {path: 'new-item', component: AddItemComponent},
   {path: 'list-items', component: ListItemsComponent},
-  {path: 'new-attachment', component: AddAttachmentComponent},
+  {path: 'new-attachment/:id', component: AddAttachmentComponent},
   {path: '', redirectTo: '/list-items', pathMatch: 'full'}
 ];
 

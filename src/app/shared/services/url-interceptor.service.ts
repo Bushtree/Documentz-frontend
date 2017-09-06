@@ -5,7 +5,6 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class UrlInterceptorService implements HttpInterceptor {
-
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (req.url.startsWith('api') && environment.server.host) {
       const newReq = req.clone({url: environment.server.host + req.url});

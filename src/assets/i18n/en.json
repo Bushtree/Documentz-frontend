@@ -1,5 +1,22 @@
 {
   "header": {
-    "brand": "Documentz"
+    "brand": "Documentz",
+    "nav": {
+      "add-item": "New Item",
+      "list": "List"
+    }
+  },
+  "form": {
+    "stored-item": {
+      "label": {
+        "description": "description",
+        "name": "name"
+      },
+      "validation": {
+        "name": {
+          "required": "name is <strong>required</strong>"
+        }
+      }
+    }
   }
 }

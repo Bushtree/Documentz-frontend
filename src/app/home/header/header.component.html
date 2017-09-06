@@ -1,12 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" [routerLink]="['/']" i18n="brand-label|Brand label in navbar@@brand-label">{{'header.brand' | translate}}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<!--<nav class="">-->
+  <!--<a class="" [routerLink]="['/']" i18n="brand-label|Brand label in navbar@@brand-label">{{'header.brand' |-->
+    <!--translate}}</a>-->
+  <!--<button class="" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
+          <!--aria-controls="navbarSupportedContent">-->
+    <!--<span class="navbar-toggler-icon"></span>-->
+  <!--</button>-->
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item" [routerLinkActive] [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</li>
-    </ul>
-  </div>
+  <!--<div class="" id="navbarSupportedContent">-->
+    <!--<ul class="">-->
+      <!--<li class="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
+        <!--<a class="" [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</nav>-->
+<!--<md-menu #appMenu="mdMenu">-->
+  <!--<button md-menu-item [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</button>-->
+<!--</md-menu>-->
+<!--<button md-icon-button [mdMenuTriggerFor]="appMenu">-->
+  <!--<md-icon>more_vert</md-icon>-->
+<!--</button>-->
+<nav md-tab-nav-bar>
+  <a md-tab-link
+     [routerLink]="['/items']"
+     routerLinkActive #list="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"
+     [active]="list.isActive">
+    {{'header.nav.list' | translate}}
+  </a>
+  <a md-tab-link
+     [routerLink]="['/items/add']"
+     routerLinkActive #rla="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"
+     [active]="rla.isActive">
+    {{'header.nav.add-item' | translate}}
+  </a>
 </nav>

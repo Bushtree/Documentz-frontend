@@ -1,4 +1,9 @@
 {
+  "card": {
+    "header": {
+      "new-item": "add new item"
+    }
+  },
   "header": {
     "brand": "Documentz",
     "nav": {

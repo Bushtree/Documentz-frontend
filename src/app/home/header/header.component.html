@@ -1,36 +1,36 @@
 <!--<nav class="">-->
-  <!--<a class="" [routerLink]="['/']" i18n="brand-label|Brand label in navbar@@brand-label">{{'header.brand' |-->
-    <!--translate}}</a>-->
-  <!--<button class="" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
-          <!--aria-controls="navbarSupportedContent">-->
-    <!--<span class="navbar-toggler-icon"></span>-->
-  <!--</button>-->
+<!--<a class="" [routerLink]="['/']" i18n="brand-label|Brand label in navbar@@brand-label">{{'header.brand' |-->
+<!--translate}}</a>-->
+<!--<button class="" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
+<!--aria-controls="navbarSupportedContent">-->
+<!--<span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
 
-  <!--<div class="" id="navbarSupportedContent">-->
-    <!--<ul class="">-->
-      <!--<li class="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
-        <!--<a class="" [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</a>-->
-      <!--</li>-->
-    <!--</ul>-->
-  <!--</div>-->
+<!--<div class="" id="navbarSupportedContent">-->
+<!--<ul class="">-->
+<!--<li class="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
+<!--<a class="" [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
 <!--</nav>-->
 <!--<md-menu #appMenu="mdMenu">-->
-  <!--<button md-menu-item [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</button>-->
+<!--<button md-menu-item [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</button>-->
 <!--</md-menu>-->
 <!--<button md-icon-button [mdMenuTriggerFor]="appMenu">-->
-  <!--<md-icon>more_vert</md-icon>-->
+<!--<md-icon>more_vert</md-icon>-->
 <!--</button>-->
-<nav md-tab-nav-bar>
-  <a md-tab-link
-     [routerLink]="['/items']"
-     routerLinkActive #list="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"
-     [active]="list.isActive">
-    {{'header.nav.list' | translate}}
-  </a>
-  <a md-tab-link
-     [routerLink]="['/items/add']"
-     routerLinkActive #rla="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"
-     [active]="rla.isActive">
-    {{'header.nav.add-item' | translate}}
-  </a>
-</nav>
+<md-toolbar color="primary" class="mat-elevation-z6">
+  <nav class="app-nav">
+    <a class="mat-button" md-button
+       [routerLink]="['/items']"
+       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      {{'header.nav.list' | translate}}
+    </a>
+    <a class="mat-button" md-button
+       [routerLink]="['/items/add']"
+       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      {{'header.nav.add-item' | translate}}
+    </a>
+  </nav>
+</md-toolbar>

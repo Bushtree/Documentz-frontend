@@ -2,3 +2,13 @@
 @import 'variables';
 //@import '../node_modules/bootstrap/scss/bootstrap';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+.app-nav .mat-button.active .mat-button-focus-overlay {
+  opacity: .8;
+}

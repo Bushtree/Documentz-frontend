@@ -10,16 +10,12 @@ import { HeaderComponent } from './header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { NewItemComponent } from './new-item/new-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MdFormFieldModule, MdInputModule, MdMenuModule, MdTabsModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
     ReactiveFormsModule,
-    MdTabsModule,
-    MdInputModule,
-    MdFormFieldModule,
     SharedModule
   ],
   providers: [

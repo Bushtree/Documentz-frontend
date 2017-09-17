@@ -1,25 +1,3 @@
-<!--<nav class="">-->
-<!--<a class="" [routerLink]="['/']" i18n="brand-label|Brand label in navbar@@brand-label">{{'header.brand' |-->
-<!--translate}}</a>-->
-<!--<button class="" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
-<!--aria-controls="navbarSupportedContent">-->
-<!--<span class="navbar-toggler-icon"></span>-->
-<!--</button>-->
-
-<!--<div class="" id="navbarSupportedContent">-->
-<!--<ul class="">-->
-<!--<li class="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
-<!--<a class="" [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</a>-->
-<!--</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</nav>-->
-<!--<md-menu #appMenu="mdMenu">-->
-<!--<button md-menu-item [routerLink]="['/items/add']">{{'header.nav.add-item' | translate}}</button>-->
-<!--</md-menu>-->
-<!--<button md-icon-button [mdMenuTriggerFor]="appMenu">-->
-<!--<md-icon>more_vert</md-icon>-->
-<!--</button>-->
 <md-toolbar color="primary" class="mat-elevation-z6">
   <nav class="app-nav">
     <a class="mat-button" md-button
@@ -33,4 +11,6 @@
       {{'header.nav.add-item' | translate}}
     </a>
   </nav>
+  <span class="fill"></span>
+  <md-icon class="sign-in" (click)="signIn()">input</md-icon>
 </md-toolbar>
